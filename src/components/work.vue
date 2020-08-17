@@ -1,7 +1,7 @@
 <template>
   <div id="work">
-    <div class="title">
-      <span class="title__work__span">Work</span>
+    <div>
+      <span class="title title__work">Work</span>
     </div>
   </div>
 </template>

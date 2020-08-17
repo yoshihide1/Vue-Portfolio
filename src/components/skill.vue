@@ -1,32 +1,34 @@
 <template>
   <div id="skill">
-    <div class="title"><span class="title__skill__span">Skill</span></div>
+    <div class="skill__line__left"></div>
+    <div class="skill__line__top"><span class="title title__skill">Skill</span></div>
     <ul class="skill">
       <li class="skill__item">
-        <img src="../assets/images/html-5.svg" alt />
+        <img src="../assets/images/html-5.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/css-3.svg" alt />
+        <img src="../assets/images/css-3.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/javascript.svg" alt />
+        <img src="../assets/images/javascript.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/vue.svg" alt />
+        <img src="../assets/images/vue.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/firebase.svg" alt />
+        <img src="../assets/images/firebase.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/bootstrap.svg" alt />
+        <img src="../assets/images/bootstrap.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item jquery">
-        <img src="../assets/images/jquery.svg" alt />
+        <img src="../assets/images/jquery.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/nuxt-icon.svg" alt />
+        <img src="../assets/images/nuxt-icon.svg" alt /><span class="skill__star">★★★☆☆</span>
       </li>
     </ul>
+    <div class="skill__line__bottom"></div>
   </div>
 </template>
 
@@ -36,7 +38,26 @@ export default {};
 
 <style scoped>
 #skill {
-  background-color: #002a5b;
+
+}
+.skill__line__left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #9a1117;
+  width: 2px;
+  height: 100vh;
+  margin-left: 50px;
+}
+.skill__line__top {
+  border-bottom: 2px solid #9a1117;
+}
+.skill__line__bottom {
+  border-bottom: 2px solid #9a1117;
+
+}
+.title__skill {
+  color: #917c50;
 }
 .jquery img {
   background-color: yellow;
@@ -48,6 +69,9 @@ export default {};
   align-items: center;
   height: 100%;
 }
+.skill__item {
+  margin: 4vh;
+}
 .skill__item img {
   display: block;
   width: 14vw;
@@ -55,5 +79,8 @@ export default {};
   margin: 1rem;
   border-radius: 10px;
   object-fit: contain;
+}
+.skill__star {
+  color: #917c50;
 }
 </style>

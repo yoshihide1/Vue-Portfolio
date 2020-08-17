@@ -32,7 +32,6 @@ export default {
   width: 100%;
   height: 65px;
   line-height: 65px;
-  background-color: #002a5b;
 }
 .nav__menu {
   display: flex;

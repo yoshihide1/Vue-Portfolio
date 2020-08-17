@@ -1,6 +1,6 @@
 <template>
   <div id="sns">
-    <div>sns</div>
+    <div><span class="title title__sns">SNS</span></div>
   </div>
 </template>
 

@@ -33,7 +33,6 @@ export default {
 
 <style scoped>
 #main {
-  background-color: #002a5b;
   height: 500px;
   border-top: 2px solid #d7000f;
 }
@@ -41,7 +40,7 @@ export default {
   position: absolute;
   top: 0;
   height: 500px;
-  margin-left: 100px;
+  margin-left: 50px;
   background-color: #d7000f;
   width: 2px;
 }

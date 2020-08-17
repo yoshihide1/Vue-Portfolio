@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="fade">
-      <div v-show="scroll > 150">
+      <div v-show="scroll > height">
         <div class="hamburger__btn" @click="activeBtn =! activeBtn">
           <span class="line line__01" :class="{'btn__line01': activeBtn}"></span>
           <span class="line line__02" :class="{'btn__line02': activeBtn}"></span>
@@ -13,7 +13,7 @@
       <div class="menu" v-show="activeBtn" @click="activeBtn = false">
         <ul>
           <li>
-            <a href="#" v-scroll-to="profile">Profile</a>
+            <a href="#profile" v-scroll-to="profile">Profile</a>
           </li>
           <li>
             <a href="#" v-scroll-to="skill">Skill</a>
@@ -28,10 +28,8 @@
       </div>
     </transition>
     <transition name="fade">
-      <div v-show="topBtn > 800" @click="scrollTop" class="top__scroll">
-       
-          <span class="top__btn">⇪</span>
-       
+      <div v-show="topBtn > height" @click="scrollTop" class="top__scroll">
+        <span class="top__btn">⇪</span>
       </div>
     </transition>
   </div>
@@ -43,7 +41,6 @@ export default {
     return {
       hamburgerMenu: true,
       activeBtn: false,
-      header: "#header",
       profile: "#profile",
       skill: "#skill",
       work: "#work",
@@ -51,10 +48,12 @@ export default {
       scrollY: 0,
       scroll: 0,
       topBtn: 0,
+      height: 0,
     };
   },
   mounted() {
     window.addEventListener("scroll", this.scrollEvent);
+    this.height = window.innerHeight;
   },
   methods: {
     scrollEvent() {
@@ -69,9 +68,9 @@ export default {
     scrollTop() {
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
-      }) 
-    }
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>
@@ -79,38 +78,36 @@ export default {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
-.top__scroll {
-}
 .top__btn {
   z-index: 1000;
   position: fixed;
   bottom: 10px;
-  right: 0;
+  right: 10px;
   font-size: 50px;
   width: 70px;
   height: 70px;
   line-height: 70px;
   cursor: pointer;
   color: #eaf6fd;
-  background-color: #002a5b;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 /*ハンバーガーメニュー*/
 .hamburger__btn {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   width: 70px;
   height: 70px;
   cursor: pointer;
   z-index: 1000;
-  background-color: #002a5b;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 .hamburger__btn .line {
@@ -118,21 +115,24 @@ export default {
   top: 0;
   left: 20px;
   width: 32px;
-  height: 2px;
+  height: 3px;
   background: white;
   text-align: center;
 }
 .hamburger__btn .line__01 {
   top: 23px;
   transition: 0.7s ease;
+  border: 1px solid black;
 }
 .hamburger__btn .line__02 {
   top: 33px;
   transition: 0.7s ease;
+  border: 1px solid black;
 }
 .hamburger__btn .line__03 {
   top: 43px;
   transition: 0.7s ease;
+  border: 1px solid black;
 }
 .btn__line01 {
   transform: translateY(10px) rotate(-45deg);

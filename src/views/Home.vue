@@ -51,12 +51,8 @@ export default {
 </script>
 <style>
 @import url("../assets/reset.css");
-/* a:hover {
-  opacity: 0.4;
-} */
 .block {
   height: 100vh;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   position: -webkit-sticky;
@@ -65,20 +61,18 @@ export default {
 }
 .title {
   font-size: 5vw;
-  border-bottom: 2px solid #d7000f;
-  border-top: 2px solid #d7000f;
-  color: #eaf6fd;
+  
 }
 .block__01 {
-  background: chartreuse;
+  background-color: #002a5b;
   z-index: 100;
 }
 .block__02 {
-background-color: coral;
+background-color: #dcd5c8;
 z-index: 200;
 }
 .block__03 {
-background-color: cornflowerblue;
+background-color: #150c15;
 z-index: 300;
 }
 .block__04 {
