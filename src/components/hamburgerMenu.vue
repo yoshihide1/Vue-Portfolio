@@ -27,6 +27,13 @@
         </ul>
       </div>
     </transition>
+    <transition name="fade">
+      <div v-show="topBtn > 800" @click="scrollTop" class="top__scroll">
+       
+          <span class="top__btn">⇪</span>
+       
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -36,12 +43,14 @@ export default {
     return {
       hamburgerMenu: true,
       activeBtn: false,
+      header: "#header",
       profile: "#profile",
       skill: "#skill",
       work: "#work",
       sns: "#sns",
       scrollY: 0,
       scroll: 0,
+      topBtn: 0,
     };
   },
   mounted() {
@@ -52,10 +61,17 @@ export default {
       if (this.scrollY) return;
       this.scrollY = setTimeout(() => {
         this.scroll = window.scrollY;
+        this.topBtn = window.scrollY;
         clearTimeout(this.scrollY);
         this.scrollY = 0;
       }, 200);
     },
+    scrollTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      }) 
+    }
   },
 };
 </script>
@@ -63,11 +79,27 @@ export default {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+.top__scroll {
+}
+.top__btn {
+  z-index: 1000;
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  cursor: pointer;
+  color: #eaf6fd;
+  background-color: #002a5b;
+  border-radius: 50%;
 }
 /*ハンバーガーメニュー*/
 .hamburger__btn {
@@ -77,7 +109,7 @@ export default {
   width: 70px;
   height: 70px;
   cursor: pointer;
-  z-index: 50;
+  z-index: 1000;
   background-color: #002a5b;
   border-radius: 50%;
 }
@@ -133,13 +165,16 @@ export default {
 }
 .menu {
   background-color: rgba(197, 197, 197, 0.671);
-  z-index: 30;
+  z-index: 900;
   padding: 2rem 1rem;
   position: fixed;
   width: 20rem;
   height: 80rem;
   top: 0;
   right: 0;
+}
+.menu a {
+  font-size: 2rem;
 }
 .menu ul {
   margin: 1rem;

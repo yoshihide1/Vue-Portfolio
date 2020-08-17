@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div id="header">
     <div class="line"></div>
     <ul class="nav__menu">
       <li><a href="#" v-scroll-to="profile" class="nav__menu__link">Profile</a></li>
@@ -28,7 +28,7 @@ export default {
 <style scoped>
 
 
-.header {
+#header {
   width: 100%;
   height: 65px;
   line-height: 65px;

@@ -1,6 +1,6 @@
 <template>
   <div id="skill">
-    <p class="title__skill"><span class="title__skill__span">Skill</span></p>
+    <div class="title"><span class="title__skill__span">Skill</span></div>
     <ul class="skill">
       <li class="skill__item">
         <img src="../assets/images/html-5.svg" alt />
@@ -37,15 +37,6 @@ export default {};
 <style scoped>
 #skill {
   background-color: #002a5b;
-}
-.title__skill {
-  font-size: 5vw;
-  color: #eaf6fd;
-  padding: 1rem;
-}
-.title__skill__span {
-  border-bottom: 5px solid #d7000f;
-  padding: 0 4vw;
 }
 .jquery img {
   background-color: yellow;

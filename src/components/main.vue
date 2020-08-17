@@ -1,16 +1,23 @@
 <template>
-  <div id="main">
-    <div id="line" />
-    <div id="content">
-      <div class="content__1">
-        <p>Hello World</p>
+  <div>
+    <Header />
+    <div id="main">
+      <div id="line" />
+      <div id="content">
+        <div class="content__1">
+          <p>Hello World</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang=ts>
+import Header from "../components/header.vue";
 export default {
+  components: {
+    Header,
+  },
   mounted() {
     const height = window.innerHeight;
     const mainHeight = document.getElementById("main")!;
@@ -33,10 +40,10 @@ export default {
 #line {
   position: absolute;
   top: 0;
-  background-color: #d7000f;
-  width: 2px;
   height: 500px;
   margin-left: 100px;
+  background-color: #d7000f;
+  width: 2px;
 }
 #content {
   position: relative;
