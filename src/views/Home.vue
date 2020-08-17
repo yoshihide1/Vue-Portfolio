@@ -5,6 +5,7 @@
     <Profile />
     <Skill />
     <Work />
+    <Sns />
     <Footer />
   </div>
 </template>
@@ -15,6 +16,7 @@ import Main from "@/components/main";
 import Profile from "@/components/profile";
 import Skill from "@/components/skill";
 import Work from "@/components/work";
+import Sns from "@/components/sns"
 import Footer from "@/components/footer";
 
 export default {
@@ -25,6 +27,7 @@ export default {
     Profile,
     Skill,
     Work,
+    Sns,
     Footer,
   },
 };

@@ -2,8 +2,9 @@
   <div id="main">
     <div id="line" />
     <div id="content">
-      <div class="content__1"></div>
-      <div class="content__2"></div>
+      <div class="content__1">
+        <p>Hello World</p>
+      </div>
     </div>
   </div>
 </template>
@@ -12,26 +13,27 @@
 export default {
   mounted() {
     const height = window.innerHeight;
-    const mainHeight = document.getElementById("main");
-    const lineHeight = document.getElementById("line");
-    const contentHeight = document.getElementById("content");
+    const mainHeight = document.getElementById("main")!;
+    const lineHeight = document.getElementById("line")!;
+    const contentHeight = document.getElementById("content")!;
     mainHeight.style.height = height - 65 + "px";
     contentHeight.style.height = height - 65 + "px";
     lineHeight.style.height = height + "px";
   },
+  methods: {},
 };
 </script>
 
 <style scoped>
 #main {
-  background-color: lightblue;
+  background-color: #002a5b;
   height: 500px;
-  border-top: 2px solid hotpink;
+  border-top: 2px solid #d7000f;
 }
 #line {
   position: absolute;
   top: 0;
-  background-color: hotpink;
+  background-color: #d7000f;
   width: 2px;
   height: 500px;
   margin-left: 100px;
@@ -43,28 +45,11 @@ export default {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  height: 25rem;
-  width: 25rem;
-  background-color: lightcoral;
-}
-.content__2 {
-  position: absolute;
-  top: 5%;
-  left: 55%;
-  transform: translate(-5%,0, 0, -55%);
-  height: 13rem;
-  width: 13rem;
-  background-color: white;
-}
-.content__3 {
-  position: absolute;
-  top: 65%;
-  left: 23%;
-  transform: translate(-65%,0 , 0, -23%);
-  height: 13rem;
-  width: 13rem;
-
-  background-color: white;
+  transform: translate(-50%, -50%);
+  height: 20rem;
+  width: 35rem;
+  background-color: #eaf6fd;
+  color: #d7000f;
+  font-size: 3rem;
 }
 </style>
