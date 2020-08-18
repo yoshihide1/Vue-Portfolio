@@ -4,11 +4,10 @@
     <div class="profile__line__title">
       <span class="title title__profile">Profile</span>
     </div>
-    <div class="profile__image"></div>
     <div class="profile__content__00">
       <div class="profile__content__01">
         <div class="profile__text">
-          <div>
+          <div class="profile__image">
             <img src="../assets/images/me.jpg" alt />
           </div>
           <div>
@@ -24,12 +23,11 @@
             <p>アクアリウム、読書、DIY</p>
           </div>
         </div>
-      <p class="profile__text__title">ー自己紹介ー</p>
-      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
+        <p class="profile__text__title">ー自己紹介ー</p>
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
       </div>
     </div>
-    <!-- <div class="profile__content__02"></div> -->
-    <div class="profile__content__03"></div>
+    <div class="profile__content__02"></div>
   </div>
 </template>
 
@@ -42,16 +40,16 @@ export default {};
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #eb5a09;
+  background-color: #c41a30;
   width: 2px;
   height: 100vh;
   margin-right: 50px;
 }
 .profile__line__title {
-  border-bottom: 2px solid #eb5a09;
+  border-bottom: 2px solid #c41a30;
 }
 .title__profile {
-  color: #e6dfcd;
+  color: #bac8c6;
 }
 .profile__text__title {
   margin-top: 0.5rem;
@@ -60,8 +58,8 @@ export default {};
 .profile__text {
   display: flex;
   text-align: left;
+  font-size: 1.6vw;
   margin-top: 1rem;
-  color: #eb5a09;
 }
 .profile__text img {
   margin-left: 1rem;
@@ -77,25 +75,25 @@ export default {};
 .profile__content__00 {
   height: 90vh;
   position: relative;
-
 }
 .profile__content__01 {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10vh;
   left: 0;
   margin: auto;
   height: 65vh;
   width: 60vw;
-  background-color: #e6dfcd;
+  background-color: #bac8c6;
+  color: #494544;
 }
-.profile__content__03 {
+.profile__content__02 {
   position: absolute;
   bottom: 0;
   right: 25vw;
   height: 24vh;
   width: 5vh;
-  background-color: #eb5a09;
+  background-color: #c41a30;
 }
 </style>

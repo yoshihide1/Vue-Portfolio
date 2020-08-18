@@ -2,10 +2,10 @@
   <div>
     <Header />
     <div id="main">
-      <div id="line" />
       <div id="content">
         <div class="content__1">
-          <p>Hello World</p>
+          <p>Yoshihide Tsukamoto</p>
+          <p>Portfolio</p>
         </div>
       </div>
     </div>
@@ -21,11 +21,9 @@ export default {
   mounted() {
     const height = window.innerHeight;
     const mainHeight = document.getElementById("main")!;
-    const lineHeight = document.getElementById("line")!;
     const contentHeight = document.getElementById("content")!;
     mainHeight.style.height = height - 65 + "px";
     contentHeight.style.height = height - 65 + "px";
-    lineHeight.style.height = height + "px";
   },
   methods: {},
 };
@@ -35,14 +33,7 @@ export default {
 #main {
   height: 500px;
   border-top: 2px solid #d7000f;
-}
-#line {
-  position: absolute;
-  top: 0;
-  height: 500px;
-  margin-left: 50px;
-  background-color: #d7000f;
-  width: 2px;
+  background-image: url("../assets/images/main.jpg");
 }
 #content {
   position: relative;
@@ -52,10 +43,9 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 20rem;
-  width: 35rem;
-  background-color: #eaf6fd;
-  color: #d7000f;
-  font-size: 3rem;
+  width: 80vw;
+  color: #eaf6fd;
+  font-size: 8vw;
+  opacity: 0.6;
 }
 </style>

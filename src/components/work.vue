@@ -7,9 +7,7 @@
     <ul class="work__content">
       <li class="work__item">
         <div class="work__text">
-          <p class="work__item__title">
-            Oltower
-          </p>
+          <p class="work__item__title">Oltower</p>
 
           <span
             class="work__text__skill"
@@ -18,32 +16,24 @@
             <img src="../assets/images/oltower.png" alt />
           </a>
           <p class="work__item__text">
-           旅行など、ちょっと遠くへ出かけたりするときに、
+            旅行など、ちょっと遠くへ出かけたりするときに、
             計画を立てていく場合、サクっと大まかな移動時間と距離などがわかると
             時間の配分等も考えれて便利かなと思い作りました。
           </p>
-          <p class="work__item__text">
-            マップをクリック(タップ)でその周辺の色々な施設が検索できます。
-          </p>
+          <p class="work__item__text">マップをクリック(タップ)でその周辺の色々な施設が検索できます。</p>
         </div>
       </li>
       <li class="work__item">
         <div class="work__text">
-          <p class="work__item__title">
-            コロナウイルス感染状況
-          </p>
+          <p class="work__item__title">コロナウイルス感染状況</p>
           <span
             class="work__text__skill"
           >Vue.js - Vuex - Node.js - MySQL - Chart.js - AWS(Lambda,RDS,CloudWatch) - CoreUI</span>
           <a href="https://master.d1yt9wvipq1at3.amplifyapp.com/">
             <img src="../assets/images/corona3.png" alt />
           </a>
-          <p class="work__item__text">
-            テレビ等の報道では感染者の数ばかり取り上げられていて、現在状況がしりたくて作りました。
-          </p>
-            <p class="work__item__text">
-            チャートを利用したり、文字を色分けすることで見やすくしました
-          </p>
+          <p class="work__item__text">テレビ等の報道では感染者の数ばかり取り上げられていて、現在状況がしりたくて作りました。</p>
+          <p class="work__item__text">チャートを利用したり、文字を色分けすることで見やすくしました</p>
         </div>
       </li>
     </ul>
@@ -60,9 +50,8 @@ export default {};
 }
 .work__text {
   background-color: #1a0b08;
-    height: 75vh;
-    padding-top: 0.5rem;
-
+  height: 75vh;
+  padding-top: 0.5rem;
 }
 .work__text__skill {
   color: #d2d5ec;

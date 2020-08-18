@@ -13,16 +13,16 @@
       <div class="menu" v-show="activeBtn" @click="activeBtn = false">
         <ul>
           <li>
-            <a href="#profile" v-scroll-to="profile">Profile</a>
+            <a href="#profile">Profile</a>
           </li>
           <li>
-            <a href="#" v-scroll-to="skill">Skill</a>
+            <a href="#skill">Skill</a>
           </li>
           <li>
-            <a href="#" v-scroll-to="work">Work</a>
+            <a href="#work">Work</a>
           </li>
           <li>
-            <a href="#" v-scroll-to="sns">SNS</a>
+            <a href="#footer">SNS</a>
           </li>
         </ul>
       </div>
@@ -41,10 +41,6 @@ export default {
     return {
       hamburgerMenu: true,
       activeBtn: false,
-      profile: "#profile",
-      skill: "#skill",
-      work: "#work",
-      sns: "#sns",
       scrollY: 0,
       scroll: 0,
       topBtn: 0,
@@ -85,7 +81,7 @@ export default {
   opacity: 0;
 }
 .top__btn {
-  z-index: 1000;
+  z-index: 1500;
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -95,7 +91,7 @@ export default {
   line-height: 50px;
   cursor: pointer;
   color: #eaf6fd;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
 }
 /*ハンバーガーメニュー*/

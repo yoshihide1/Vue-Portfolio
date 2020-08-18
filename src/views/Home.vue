@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-    <!-- <Header /> -->
     <HamburgerMenu />
     <div class="block block__01">
       <Main />
@@ -14,9 +13,6 @@
     <div class="block block__04">
       <Work />
     </div>
-    <!-- <div class="block block__05">
-      <Sns />
-    </div> -->
     <div class="block block__footer">
       <Footer />
     </div>
@@ -25,24 +21,20 @@
 
 <script>
 import HamburgerMenu from "@/components/hamburgerMenu";
-// import Header from "@/components/header";
 import Main from "@/components/main";
 import Profile from "@/components/profile";
 import Skill from "@/components/skill";
 import Work from "@/components/work";
-// import Sns from "@/components/sns";
 import Footer from "@/components/footer";
 
 export default {
   name: "Home",
   components: {
     HamburgerMenu,
-    // Header,
     Main,
     Profile,
     Skill,
     Work,
-    // Sns,
     Footer,
   },
   data() {
@@ -70,11 +62,11 @@ export default {
   font-size: 5vw;
 }
 .block__01 {
-  background-color: #002a5b;
+  background-color: #000;
   z-index: 100;
 }
 .block__02 {
-  background-color: #567947;
+  background-color: #494544;
   z-index: 200;
 }
 .block__03 {

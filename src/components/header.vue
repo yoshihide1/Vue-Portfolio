@@ -2,10 +2,18 @@
   <div id="header">
     <div class="line"></div>
     <ul class="nav__menu">
-      <li><a href="#" v-scroll-to="profile" class="nav__menu__link">Profile</a></li>
-      <li><a href="#" v-scroll-to="skill" class="nav__menu__link">Skill</a></li>
-      <li><a href="#" v-scroll-to="work" class="nav__menu__link">Work</a></li>
-      <li><a href="#" v-scroll-to="sns" class="nav__menu__link">SNS</a></li>
+      <li>
+        <router-link class="nav__menu__link" v-scroll-to="'#profile'" to>Profile</router-link>
+      </li>
+      <li>
+        <router-link class="nav__menu__link" v-scroll-to="'#skill'" to>Skill</router-link>
+      </li>
+      <li>
+        <router-link class="nav__menu__link" v-scroll-to="'#work'" to>Work</router-link>
+      </li>
+      <li>
+        <router-link class="nav__menu__link" v-scroll-to="'#footer'" to>SNS</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -16,18 +24,16 @@ export default {
     return {
       hamburgerMenu: true,
       activeBtn: false,
-      profile: '#profile',
-      skill: '#skill',
-      work: '#work',
-      sns: '#sns'
-    }
+      profile: "#profile",
+      skill: "#skill",
+      work: "#work",
+      sns: "#footer",
+    };
   },
-}
+};
 </script>
 
 <style scoped>
-
-
 #header {
   width: 100%;
   height: 65px;
@@ -42,6 +48,4 @@ export default {
   font-size: 1.2rem;
   margin-right: 3rem;
 }
-
-
 </style>
