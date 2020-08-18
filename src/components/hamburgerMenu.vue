@@ -90,9 +90,9 @@ export default {
   bottom: 10px;
   right: 10px;
   font-size: 50px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   cursor: pointer;
   color: #eaf6fd;
   background-color: rgba(255, 255, 255, 0.2);
