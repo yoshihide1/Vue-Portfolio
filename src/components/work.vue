@@ -103,4 +103,25 @@ export default {};
 .work__line__top {
   border-bottom: 2px solid #d2d5ec;
 }
+@media screen and (max-width: 769px) {
+  .work__line__right {
+    display: none;
+  }
+  .work__content {
+    display: block;
+    height: 100vh;
+    background-color: #63676b;
+  }
+  .work__item {
+    margin: 0.5rem auto;
+    width: 90vw;
+    height: 45vh;
+  }
+  .work__item img {
+    width: 90vw;
+  }
+  .work__text {
+    height: 45vh;
+  }
+}
 </style>

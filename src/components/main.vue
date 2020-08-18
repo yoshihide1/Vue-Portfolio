@@ -14,13 +14,13 @@
 
 <script lang=ts>
 import Header from "../components/header.vue";
-import {mapState} from "vuex"
+import { mapState } from "vuex";
 export default {
   components: {
     Header,
   },
   computed: {
-    ...mapState(["name"])
+    ...mapState(["name"]),
   },
   mounted() {
     const height = window.innerHeight;

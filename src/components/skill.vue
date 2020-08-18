@@ -113,6 +113,6 @@ export default {};
   }
   .skill__item {
     margin: 1rem;
-  }  
+  }
 }
 </style>

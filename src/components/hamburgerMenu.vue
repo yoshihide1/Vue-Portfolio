@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -49,20 +49,20 @@ export default {
     };
   },
   computed: {
-    ...mapState(["name"])
+    ...mapState(["name"]),
   },
   mounted() {
-      window.addEventListener("scroll", this.scrollEvent);
+    window.addEventListener("scroll", this.scrollEvent);
     this.height = window.innerHeight;
   },
   methods: {
-    hamMenu () {
+    hamMenu() {
       if (this.name === "pc") {
-        console.log(111)
-        return this.scroll > this.height
+        console.log(111);
+        return this.scroll > this.height;
       } else {
-        console.log(222)
-        return true
+        console.log(222);
+        return true;
       }
     },
     scrollEvent() {
@@ -191,9 +191,8 @@ export default {
 }
 
 @media screen and (max-width: 769px) {
-  .hamburger__btn { 
-      background-color: rgba(255, 255, 255, 0.6);
+  .hamburger__btn {
+    background-color: rgba(255, 255, 255, 0.6);
   }
-  
 }
 </style>
