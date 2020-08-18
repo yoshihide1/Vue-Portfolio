@@ -74,7 +74,7 @@ export default {
   z-index: 100;
 }
 .block__02 {
-  background-color: #dcd5c8;
+  background-color: #567947;
   z-index: 200;
 }
 .block__03 {

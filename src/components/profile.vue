@@ -4,9 +4,32 @@
     <div class="profile__line__title">
       <span class="title title__profile">Profile</span>
     </div>
-      <div class="profile__content__01"></div>
-      <div class="profile__content__02"></div>
-      <div class="profile__content__03"></div>
+    <div class="profile__image"></div>
+    <div class="profile__content__00">
+      <div class="profile__content__01">
+        <div class="profile__text">
+          <div>
+            <img src="../assets/images/me.jpg" alt />
+          </div>
+          <div>
+            <p class="profile__text__title">ー名前ー</p>
+            <p>
+              <span class="profile__text__name">塚本 克秀</span>
+            </p>
+            <p class="profile__text__title">ー出身地ー</p>
+            <p>兵庫県</p>
+            <p class="profile__text__title">ー生年月日ー</p>
+            <p>1988年 8月 13日</p>
+            <p class="profile__text__title">ー趣味ー</p>
+            <p>アクアリウム、読書、DIY</p>
+          </div>
+        </div>
+      <p class="profile__text__title">ー自己紹介ー</p>
+      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
+      </div>
+    </div>
+    <!-- <div class="profile__content__02"></div> -->
+    <div class="profile__content__03"></div>
   </div>
 </template>
 
@@ -19,47 +42,60 @@ export default {};
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #a2a2ad;
+  background-color: #eb5a09;
   width: 2px;
   height: 100vh;
   margin-right: 50px;
-  
 }
 .profile__line__title {
-  border-bottom: 2px solid #a2a2ad;
-
+  border-bottom: 2px solid #eb5a09;
 }
 .title__profile {
-  color: #1f1e63;
-  
+  color: #e6dfcd;
 }
-.profile__content {
-  width: 50vw;
-  height: 50vh;
-  background-color: antiquewhite;
+.profile__text__title {
+  margin-top: 0.5rem;
+  font-size: 1.4vw;
+}
+.profile__text {
+  display: flex;
+  text-align: left;
+  margin-top: 1rem;
+  color: #eb5a09;
+}
+.profile__text img {
+  margin-left: 1rem;
+  margin-right: 2rem;
+  height: 25vh;
+}
+.profile__text__name {
+  font-size: 2vw;
+}
+.profile__image img {
+  height: 40vh;
+}
+.profile__content__00 {
+  height: 90vh;
+  position: relative;
+
 }
 .profile__content__01 {
   position: absolute;
-  top: 15vh;
-  left: 40vw;
-  height: 70vh;
-  width: 40vw;
-  background-color: #fff;
-}
-.profile__content__02 {
-  position: absolute;
-  top: 30vh;
-  left: 25vw;
-  height: 40vh;
-  width: 20vw;
-  background-color: #1f1e63;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 65vh;
+  width: 60vw;
+  background-color: #e6dfcd;
 }
 .profile__content__03 {
   position: absolute;
   bottom: 0;
   right: 25vw;
   height: 24vh;
-  width: 5vw;
-  background-color: #a2a2ad;
+  width: 5vh;
+  background-color: #eb5a09;
 }
 </style>
