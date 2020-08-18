@@ -1,21 +1,24 @@
 <template>
   <div class="main">
-    <HamburgerMenu />
-    <div class="block block__01">
-      <Main />
+    <div v-if="device === 'pc'">
+      <HamburgerMenu />
+      <div class="block block__01">
+        <Main />
+      </div>
+      <div class="block block__02">
+        <Profile />
+      </div>
+      <div class="block block__03">
+        <Skill />
+      </div>
+      <div class="block block__04">
+        <Work />
+      </div>
+      <div class="block block__footer">
+        <Footer />
+      </div>
     </div>
-    <div class="block block__02">
-      <Profile />
-    </div>
-    <div class="block block__03">
-      <Skill />
-    </div>
-    <div class="block block__04">
-      <Work />
-    </div>
-    <div class="block block__footer">
-      <Footer />
-    </div>
+    <div v-if="device === 'sp'">スマホーーーー</div>
   </div>
 </template>
 
@@ -26,7 +29,7 @@ import Profile from "@/components/profile";
 import Skill from "@/components/skill";
 import Work from "@/components/work";
 import Footer from "@/components/footer";
-
+import { mapState } from "vuex";
 export default {
   name: "Home",
   components: {
@@ -38,8 +41,36 @@ export default {
     Footer,
   },
   data() {
-    return {};
+    return {
+      device: "pc",
+      deviceSize: 0,
+      resizeTimer: null,
+    };
   },
+  computed: {
+    ...mapState(["size", "name"]),
+  },
+  watch: {
+    name() {
+      this.device = this.name;
+      console.log(this.device);
+    },
+  },
+  created() {
+    this.deviceSize = window.innerWidth;
+    this.$store.dispatch("getDeviceSize", this.deviceSize);
+  },
+  mounted() {
+    window.addEventListener("resize", (e) => {
+      if (this.resizeTimer) return;
+      this.resizeTimer = setTimeout(() => {
+        this.resizeTimer = null;
+        this.deviceSize = e.target.innerWidth;
+        this.$store.dispatch("getDeviceSize", this.deviceSize);
+      }, 500);
+    });
+  },
+  methods: {},
 };
 </script>
 <style>

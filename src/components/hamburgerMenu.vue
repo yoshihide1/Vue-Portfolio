@@ -39,7 +39,6 @@
 export default {
   data() {
     return {
-      hamburgerMenu: true,
       activeBtn: false,
       scrollY: 0,
       scroll: 0,
@@ -48,7 +47,7 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.scrollEvent);
+      window.addEventListener("scroll", this.scrollEvent);
     this.height = window.innerHeight;
   },
   methods: {
