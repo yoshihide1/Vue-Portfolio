@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header v-if="name === 'pc'" />
     <div id="main">
       <div id="content">
         <div class="content__1">
@@ -14,9 +14,13 @@
 
 <script lang=ts>
 import Header from "../components/header.vue";
+import {mapState} from "vuex"
 export default {
   components: {
     Header,
+  },
+  computed: {
+    ...mapState(["name"])
   },
   mounted() {
     const height = window.innerHeight;

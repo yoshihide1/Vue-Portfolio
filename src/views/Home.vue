@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <!-- PC -->
     <div v-if="device === 'pc'">
       <HamburgerMenu />
       <div class="block block__01">
@@ -18,7 +19,26 @@
         <Footer />
       </div>
     </div>
-    <div v-if="device === 'sp'">スマホーーーー</div>
+
+    <!-- SP -->
+    <div v-if="device === 'sp'">
+      <HamburgerMenu />
+      <div class="block block__01">
+        <Main />
+      </div>
+      <div class="block block__02">
+        <Profile />
+      </div>
+      <div class="block block__03">
+        <Skill />
+      </div>
+      <div class="block block__04">
+        <Work />
+      </div>
+      <div class="block block__footer">
+        <Footer />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -111,5 +131,11 @@ export default {
 .block__05 {
   background-color: darkorange;
   z-index: 500;
+}
+
+@media screen and (max-width: 769px) {
+  .title {
+    font-size: 8vw;
+  }
 }
 </style>

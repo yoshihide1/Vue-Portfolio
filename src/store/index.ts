@@ -10,6 +10,7 @@ export default new Vuex.Store({
   mutations: {
     deviceName(state, name: string) {
       state.name = name
+      console.log(state.name)
     }
   },
   actions: {

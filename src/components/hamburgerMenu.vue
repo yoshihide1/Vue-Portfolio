@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="fade">
-      <div v-show="scroll > height">
+      <div v-show="hamMenu()">
         <div class="hamburger__btn" @click="activeBtn =! activeBtn">
           <span class="line line__01" :class="{'btn__line01': activeBtn}"></span>
           <span class="line line__02" :class="{'btn__line02': activeBtn}"></span>
@@ -9,6 +9,7 @@
         </div>
       </div>
     </transition>
+
     <transition name="menu">
       <div class="menu" v-show="activeBtn" @click="activeBtn = false">
         <ul>
@@ -36,6 +37,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex"
 export default {
   data() {
     return {
@@ -46,11 +48,23 @@ export default {
       height: 0,
     };
   },
+  computed: {
+    ...mapState(["name"])
+  },
   mounted() {
       window.addEventListener("scroll", this.scrollEvent);
     this.height = window.innerHeight;
   },
   methods: {
+    hamMenu () {
+      if (this.name === "pc") {
+        console.log(111)
+        return this.scroll > this.height
+      } else {
+        console.log(222)
+        return true
+      }
+    },
     scrollEvent() {
       if (this.scrollY) return;
       this.scrollY = setTimeout(() => {
@@ -174,5 +188,12 @@ export default {
 .menu ul {
   margin: 1rem;
   padding: 0;
+}
+
+@media screen and (max-width: 769px) {
+  .hamburger__btn { 
+      background-color: rgba(255, 255, 255, 0.6);
+  }
+  
 }
 </style>

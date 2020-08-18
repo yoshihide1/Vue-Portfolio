@@ -59,8 +59,6 @@ export default {};
 </script>
 
 <style scoped>
-#skill {
-}
 .skill__line__left {
   position: absolute;
   top: 0;
@@ -108,5 +106,13 @@ export default {};
 }
 .skill__star {
   color: #917c50;
+}
+@media screen and (max-width: 769px) {
+  .skill__line__left {
+    display: none;
+  }
+  .skill__item {
+    margin: 1rem;
+  }  
 }
 </style>

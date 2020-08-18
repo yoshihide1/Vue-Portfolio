@@ -62,8 +62,7 @@ export default {};
   margin-top: 1rem;
 }
 .profile__text img {
-  margin-left: 1rem;
-  margin-right: 2rem;
+  margin: 0 2rem 0 1rem;
   height: 25vh;
 }
 .profile__text__name {
@@ -95,5 +94,37 @@ export default {};
   height: 24vh;
   width: 5vh;
   background-color: #c41a30;
+}
+@media screen and (max-width: 769px) {
+  .profile__line {
+    display: none;
+  }
+    .profile__text {
+      display: block;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .profile__text img {
+      margin: 1rem 0 0 0;
+      height: 30vh;
+    }
+    .profile__text__title {
+      font-size: 1.2rem;
+    }
+    .profile__content__00 {
+      position: static;
+      height: 90vh;
+    }
+    .profile__content__01 {
+      position: static;
+      height: 85vh;
+      width: 80%;
+    }
+    .profile__content__02 {
+      right: 0;
+      bottom: 5vh;
+      height: 5vh;
+      width: 20vw;
+    }
 }
 </style>
