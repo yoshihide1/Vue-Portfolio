@@ -1,31 +1,53 @@
 <template>
   <div id="skill">
     <div class="skill__line__left"></div>
-    <div class="skill__line__top"><span class="title title__skill">Skill</span></div>
+    <div class="skill__line__top">
+      <span class="title title__skill">Skill</span>
+    </div>
     <ul class="skill">
       <li class="skill__item">
-        <img src="../assets/images/html-5.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/html-5.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/css-3.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/css-3.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/javascript.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/javascript.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/vue.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/vue.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/firebase.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/typescript-icon.svg" alt />
+        <span class="skill__star">★★☆☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/bootstrap.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/nuxt-icon.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item jquery">
-        <img src="../assets/images/jquery.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/jquery.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
       </li>
       <li class="skill__item">
-        <img src="../assets/images/nuxt-icon.svg" alt /><span class="skill__star">★★★☆☆</span>
+        <img src="../assets/images/bootstrap.svg" alt />
+        <span class="skill__star">★★★☆☆</span>
+      </li>
+      <li class="skill__item">
+        <img src="../assets/images/firebase.svg" alt />
+        <span class="skill__star">★★☆☆☆</span>
+      </li>
+      <li class="skill__item github">
+        <img src="../assets/images/github-icon.svg" alt />
+        <span class="skill__star">★★☆☆☆</span>
+      </li>
+      <li class="skill__item aws">
+        <img src="../assets/images/aws.svg" alt />
+        <span class="skill__star">★☆☆☆☆</span>
       </li>
     </ul>
     <div class="skill__line__bottom"></div>
@@ -38,7 +60,6 @@ export default {};
 
 <style scoped>
 #skill {
-
 }
 .skill__line__left {
   position: absolute;
@@ -54,13 +75,18 @@ export default {};
 }
 .skill__line__bottom {
   border-bottom: 2px solid #9a1117;
-
 }
 .title__skill {
   color: #917c50;
 }
 .jquery img {
   background-color: yellow;
+}
+.github img {
+  background-color: #9a1117;
+}
+.aws img {
+  background-color: #fff;
 }
 .skill {
   display: flex;
@@ -70,12 +96,12 @@ export default {};
   height: 100%;
 }
 .skill__item {
-  margin: 4vh;
+  margin: 3.7vh;
 }
 .skill__item img {
   display: block;
-  width: 14vw;
-  height: 14vw;
+  width: 10vw;
+  height: 10vw;
   margin: 1rem;
   border-radius: 10px;
   object-fit: contain;
