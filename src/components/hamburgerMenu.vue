@@ -58,10 +58,8 @@ export default {
   methods: {
     hamMenu() {
       if (this.device === "pc") {
-        console.log(111);
         return this.scroll > this.height;
       } else {
-        console.log(222);
         return true;
       }
     },

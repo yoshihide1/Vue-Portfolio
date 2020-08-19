@@ -98,12 +98,6 @@ export default {
 .jquery img {
   background-color: yellow;
 }
-.github img {
-  background-color: #9a1117;
-}
-.aws img {
-  background-color: #fff;
-}
 .skill {
   display: flex;
   flex-wrap: wrap;
