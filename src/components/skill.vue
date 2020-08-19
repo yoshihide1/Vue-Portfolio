@@ -57,8 +57,10 @@
 <script lang="ts">
 import { mapGetters } from "vuex";
 import Scrollreveal from "scrollreveal";
+import { FadeInCongig } from "../store/type"
 
 export default {
+  name: "skill",
   computed: {
     ...mapGetters(["fadeInConfig"]),
   },
@@ -66,7 +68,7 @@ export default {
     this.fadeIn();
   },
   methods: {
-    fadeIn(this: { fadeInConfig: Function }) {
+    fadeIn(this: { fadeInConfig: FadeInCongig }) {
       Scrollreveal().reveal(".skill__item", this.fadeInConfig(800, 0, "bottom", true));
       Scrollreveal().reveal(".skill__star", this.fadeInConfig(800, 500, "left", true));
     },

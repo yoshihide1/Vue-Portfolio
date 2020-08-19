@@ -59,19 +59,12 @@ export default {
   },
   data() {
     return {
-      device: "pc",
       deviceSize: 0,
       resizeTimer: null,
     };
   },
   computed: {
-    ...mapState(["size", "name"]),
-  },
-  watch: {
-    name() {
-      this.device = this.name;
-      console.log(this.device);
-    },
+    ...mapState(["size", "device"]),
   },
   created() {
     this.deviceSize = window.innerWidth;
@@ -102,7 +95,7 @@ export default {
   top: 0;
 }
 .block__footer {
-  height: 10vh;
+  height: 20vh;
   top: 100px;
   background-color: white;
   z-index: 1000;
@@ -126,14 +119,13 @@ export default {
   background-color: #63676b;
   z-index: 400;
 }
-.block__05 {
-  background-color: darkorange;
-  z-index: 500;
-}
 
 @media screen and (max-width: 769px) {
   .title {
     font-size: 8vw;
+  }
+  .block__footer {
+    height: 15vh;
   }
 }
 </style>

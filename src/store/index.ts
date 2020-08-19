@@ -1,23 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { FadeIn } from '../store/type'
 Vue.use(Vuex)
-
-interface FadeIn {
-  duration: number;
-  delay: number;
-  origin: string;
-  reset: boolean;
-  distance: string;
-  viewFactor: number;
-}
 
 export default new Vuex.Store({
   state: {
-    name: "pc"
+    device: "pc"
   },
   mutations: {
-    deviceName(state, name: string) {
-      state.name = name
+    deviceName(state, device: string) {
+      state.device = device
     }
   },
   actions: {

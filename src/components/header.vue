@@ -1,6 +1,6 @@
 <template>
-  <div id="header">
-    <ul v-if="name ==='pc'" class="nav__menu">
+  <div id="header__menu">
+    <ul v-if="device ==='pc'" class="nav__menu">
       <li>
         <router-link class="nav__menu__link" v-scroll-to="'#profile'" to>Profile</router-link>
       </li>
@@ -20,8 +20,10 @@
 <script lang='ts'>
 import { mapState, mapGetters } from "vuex";
 import Scrollreveal from "scrollreveal";
+import { FadeInCongig } from "../store/type"
 
 export default {
+  name: "headerMenu",
   data() {
     return {
       hamburgerMenu: true,
@@ -29,14 +31,14 @@ export default {
     };
   },
   computed: {
-    ...mapState(["name"]),
+    ...mapState(["device"]),
     ...mapGetters(["fadeInConfig"])
   },
   mounted(this: {fadeIn: Function}) {
     this.fadeIn();
   },
   methods: {
-    fadeIn(this: {fadeInConfig: Function}): void {
+    fadeIn(this: {fadeInConfig: FadeInCongig}) {
       Scrollreveal().reveal(".nav__menu__link", this.fadeInConfig(1200, 0, "top", true, "500")
       );
     },
@@ -45,7 +47,7 @@ export default {
 </script>
 
 <style scoped>
-#header {
+#header__menu {
   width: 100%;
   height: 65px;
   line-height: 65px;
@@ -60,7 +62,7 @@ export default {
   margin-right: 3rem;
 }
 @media screen and (max-width: 769px) {
-  #header {
+  #header__menu {
     height: 85px;
   }
   .nav__menu {

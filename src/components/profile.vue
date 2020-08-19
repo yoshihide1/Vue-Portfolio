@@ -29,21 +29,22 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { mapGetters } from "vuex";
 import Scrollreveal from "scrollreveal";
+import { FadeInCongig } from "../store/type"
 
 export default {
   name: "profile",
   computed: {
     ...mapGetters(["fadeInConfig"]),
   },
-  mounted() {
+  mounted(this: {fadeIn: Function}) {
     this.fadeIn();
   },
   methods: {
-    fadeIn() {
-      Scrollreveal().reveal(".profile__image", this.fadeInConfig(800, 0))
+    fadeIn(this: {fadeInConfig: FadeInCongig}) {
+      Scrollreveal().reveal(".profile__image", this.fadeInConfig(800, 0, "bottom"))
       Scrollreveal().reveal(".profile__text__title", this.fadeInConfig(800, 0, "top"));
       Scrollreveal().reveal(".profile__text", this.fadeInConfig(800, 500, "left"));
 

@@ -49,7 +49,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["name"]),
+    ...mapState(["device"]),
   },
   mounted() {
     window.addEventListener("scroll", this.scrollEvent);
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     hamMenu() {
-      if (this.name === "pc") {
+      if (this.device === "pc") {
         console.log(111);
         return this.scroll > this.height;
       } else {
