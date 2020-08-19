@@ -85,7 +85,6 @@ export default {
 </script>
 <style>
 @import url("../assets/reset.css");
-
 .block {
   height: 100vh;
   align-items: center;
@@ -95,9 +94,9 @@ export default {
   top: 0;
 }
 .block__footer {
-  height: 20vh;
-  top: 100px;
-  background-color: white;
+  height: 15vh;
+  top: 85vh;
+  background-color: #494544;
   z-index: 1000;
 }
 .title {
@@ -125,7 +124,8 @@ export default {
     font-size: 8vw;
   }
   .block__footer {
-    height: 15vh;
+    height: 10vh;
+    top: 90vh;
   }
 }
 </style>

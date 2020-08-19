@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <div>
+    <div class="footer__sns">
       <ul class="sns__items">
         <li>
           <a href="https://twitter.com/@T_yoshihide_" target="_blank">
@@ -28,10 +28,10 @@ export default {};
 </script>
 
 <style scoped>
-#footer {
-  height: 15vh;
+.footer__sns {
   border-top: 2px solid #bac8c6;
-  background-color: #494544;
+    background-color: #494544;
+  padding-bottom: 0.5rem;
 }
 .sns__items {
   display: flex;
@@ -48,6 +48,13 @@ export default {};
   color: #bac8c6;
     border-bottom: 2px solid #c41a30;
     padding: 0 1rem;
+    margin-bottom: 0.5rem;
 
+}
+@media screen and (max-width: 769px) {
+ #footer {
+   height: 10vh;
+   padding-bottom: 0.5rem;
+ } 
 }
 </style>
