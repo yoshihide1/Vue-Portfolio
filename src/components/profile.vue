@@ -32,7 +32,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'profile'
+};
 </script>
 
 <style scoped>

@@ -55,7 +55,24 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from 'vuex'
+import Scrollreveal from "scrollreveal";
+
+export default {
+
+  computed: {
+    ...mapGetters(["fadeInConfig"])
+  },
+  mounted() {
+    this.fadeIn()
+  },
+  methods: {
+    fadeIn() {
+      Scrollreveal().reveal('.skill__item', this.fadeInConfig(1200, "right"))
+      Scrollreveal().reveal('.skill__star', this.fadeInConfig(1500, "left"))
+    }
+  },
+};
 </script>
 
 <style scoped>

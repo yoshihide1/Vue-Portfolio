@@ -1,6 +1,5 @@
 <template>
   <div id="header">
-    <div class="line"></div>
     <ul class="nav__menu">
       <li>
         <router-link class="nav__menu__link" v-scroll-to="'#profile'" to>Profile</router-link>
@@ -24,10 +23,6 @@ export default {
     return {
       hamburgerMenu: true,
       activeBtn: false,
-      profile: "#profile",
-      skill: "#skill",
-      work: "#work",
-      sns: "#footer",
     };
   },
 };

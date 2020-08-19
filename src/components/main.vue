@@ -4,8 +4,8 @@
     <div id="main">
       <div id="content">
         <div class="content__1">
-          <p>Yoshihide Tsukamoto</p>
-          <p>Portfolio</p>
+          <p class="fade__in__01">Yoshihide Tsukamoto</p>
+          <p class="fade__in__02">Portfolio</p>
         </div>
       </div>
     </div>
@@ -14,13 +14,16 @@
 
 <script lang=ts>
 import Header from "../components/header.vue";
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
+import Scrollreveal from "scrollreveal";
+
 export default {
   components: {
     Header,
   },
   computed: {
     ...mapState(["name"]),
+    ...mapGetters(["fadeInConfig"]),
   },
   mounted() {
     const height = window.innerHeight;
@@ -28,8 +31,14 @@ export default {
     const contentHeight = document.getElementById("content")!;
     mainHeight.style.height = height - 65 + "px";
     contentHeight.style.height = height - 65 + "px";
+    this.fadeIn();
   },
-  methods: {},
+  methods: {
+    fadeIn() {
+      Scrollreveal().reveal(".fade__in__01", this.fadeInConfig(1000, "left"));
+      Scrollreveal().reveal(".fade__in__02", this.fadeInConfig(1000, "right",500));
+    },
+  },
 };
 </script>
 
