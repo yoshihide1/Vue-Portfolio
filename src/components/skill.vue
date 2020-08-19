@@ -42,7 +42,7 @@
         <span class="skill__star">★★☆☆☆</span>
       </li>
       <li class="skill__item github">
-        <img src="../assets/images/github-icon.svg" alt />
+        <img src="../assets/images/github-icon-1.svg" alt />
         <span class="skill__star">★★☆☆☆</span>
       </li>
       <li class="skill__item aws">

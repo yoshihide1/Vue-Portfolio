@@ -9,7 +9,7 @@
         </li>
         <li>
           <a href="https://github.com/yoshihide1/" target="_blank">
-            <img src="../assets/images/github-icon.svg" alt />
+            <img src="../assets/images/github-icon-2.svg" alt />
           </a>
         </li>
         <li>
@@ -18,7 +18,7 @@
           </a>
         </li>
       </ul>
-      <span>©Yoshihide Tsukamoto</span>
+      <span class="copyright">©Yoshihide Tsukamoto</span>
     </div>
   </div>
 </template>
@@ -27,9 +27,11 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #footer {
-  border-top: 2px solid #000;
+  height: 15vh;
+  border-top: 2px solid #bac8c6;
+  background-color: #494544;
 }
 .sns__items {
   display: flex;
@@ -37,8 +39,15 @@ export default {};
 }
 .sns__items img {
   width: 5vw;
+  height: 5vw;
 }
 .sns__items li {
   margin: 1rem 2rem;
+}
+.copyright {
+  color: #bac8c6;
+    border-bottom: 2px solid #c41a30;
+    padding: 0 1rem;
+
 }
 </style>
