@@ -1,6 +1,6 @@
 <template>
-  <div id="header__menu">
-    <ul v-if="device ==='pc'" class="nav__menu">
+  <div v-if="device ==='pc'" id="header__menu">
+    <ul class="nav__menu">
       <li>
         <router-link class="nav__menu__link" v-scroll-to="'#profile'" to>Profile</router-link>
       </li>
@@ -62,9 +62,9 @@ export default {
   margin-right: 3rem;
 }
 @media screen and (max-width: 769px) {
-  #header__menu {
+  /* #header__menu {
     height: 85px;
-  }
+  } */
   .nav__menu {
     display: none;
   }

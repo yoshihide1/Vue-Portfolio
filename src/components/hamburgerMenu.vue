@@ -114,7 +114,7 @@ export default {
   height: 70px;
   cursor: pointer;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 .hamburger__btn .line {
@@ -190,7 +190,10 @@ export default {
 
 @media screen and (max-width: 769px) {
   .hamburger__btn {
-    background-color: rgba(255, 255, 255, 0.6);
+    top: 1px;
+    right: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
 }
 </style>
