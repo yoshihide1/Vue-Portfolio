@@ -92,6 +92,7 @@ export default {
 </script>
 <style>
 @import url("../assets/reset.css");
+
 .block {
   height: 100vh;
   align-items: center;

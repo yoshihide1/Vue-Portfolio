@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header v-if="name === 'pc'" />
+    <Header />
     <div id="main">
       <div id="content">
         <div class="content__1">
@@ -25,7 +25,7 @@ export default {
     ...mapState(["name"]),
     ...mapGetters(["fadeInConfig"]),
   },
-  mounted() {
+  mounted(this: {fadeIn: Function}) {
     const height = window.innerHeight;
     const mainHeight = document.getElementById("main")!;
     const contentHeight = document.getElementById("content")!;
@@ -34,9 +34,9 @@ export default {
     this.fadeIn();
   },
   methods: {
-    fadeIn() {
-      Scrollreveal().reveal(".fade__in__01", this.fadeInConfig(1000, "left"));
-      Scrollreveal().reveal(".fade__in__02", this.fadeInConfig(1000, "right",500));
+    fadeIn(this: {fadeInConfig: Function }) {
+      Scrollreveal().reveal(".fade__in__01", this.fadeInConfig(1000, 0, "left", true));
+      Scrollreveal().reveal(".fade__in__02", this.fadeInConfig(1000, 500, "left", true));
     },
   },
 };

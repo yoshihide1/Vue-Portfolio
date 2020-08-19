@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
 Vue.use(Vuex)
 
 interface FadeIn {
   duration: number;
+  delay: number;
   origin: string;
   reset: boolean;
-  delay: number;
   distance: string;
   viewFactor: number;
 }
@@ -19,7 +18,6 @@ export default new Vuex.Store({
   mutations: {
     deviceName(state, name: string) {
       state.name = name
-      console.log(state.name)
     }
   },
   actions: {
@@ -32,14 +30,14 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    fadeInConfig: () => (duration: number, origin: string, delay: number = 0, reset = true, distance: string = "100" ): FadeIn => {
+    fadeInConfig: () => (duration: number, delay: number, origin: string, reset = false, distance = "100", viewFactor = 0.3): FadeIn => {
       return {
         duration: duration,
-        origin: origin,
         delay: delay,
+        origin: origin,
         reset: reset,
         distance: distance + "px",
-        viewFactor: 0.3
+        viewFactor: viewFactor
       }
     }
   },

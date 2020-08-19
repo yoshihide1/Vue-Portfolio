@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <ul class="nav__menu">
+    <ul v-if="name ==='pc'" class="nav__menu">
       <li>
         <router-link class="nav__menu__link" v-scroll-to="'#profile'" to>Profile</router-link>
       </li>
@@ -17,13 +17,29 @@
   </div>
 </template>
 
-<script>
+<script lang='ts'>
+import { mapState, mapGetters } from "vuex";
+import Scrollreveal from "scrollreveal";
+
 export default {
   data() {
     return {
       hamburgerMenu: true,
       activeBtn: false,
     };
+  },
+  computed: {
+    ...mapState(["name"]),
+    ...mapGetters(["fadeInConfig"])
+  },
+  mounted(this: {fadeIn: Function}) {
+    this.fadeIn();
+  },
+  methods: {
+    fadeIn(this: {fadeInConfig: Function}): void {
+      Scrollreveal().reveal(".nav__menu__link", this.fadeInConfig(1200, 0, "top", true, "500")
+      );
+    },
   },
 };
 </script>
@@ -42,5 +58,13 @@ export default {
   color: #eaf6fd;
   font-size: 1.2rem;
   margin-right: 3rem;
+}
+@media screen and (max-width: 769px) {
+  #header {
+    height: 85px;
+  }
+  .nav__menu {
+    display: none;
+  }
 }
 </style>

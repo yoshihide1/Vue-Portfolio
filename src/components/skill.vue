@@ -54,23 +54,22 @@
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
+<script lang="ts">
+import { mapGetters } from "vuex";
 import Scrollreveal from "scrollreveal";
 
 export default {
-
   computed: {
-    ...mapGetters(["fadeInConfig"])
+    ...mapGetters(["fadeInConfig"]),
   },
-  mounted() {
-    this.fadeIn()
+  mounted(this: { fadeIn: Function }) {
+    this.fadeIn();
   },
   methods: {
-    fadeIn() {
-      Scrollreveal().reveal('.skill__item', this.fadeInConfig(1200, "right"))
-      Scrollreveal().reveal('.skill__star', this.fadeInConfig(1500, "left"))
-    }
+    fadeIn(this: { fadeInConfig: Function }) {
+      Scrollreveal().reveal(".skill__item", this.fadeInConfig(800, 0, "bottom", true));
+      Scrollreveal().reveal(".skill__star", this.fadeInConfig(800, 500, "left", true));
+    },
   },
 };
 </script>

@@ -12,19 +12,17 @@
           </div>
           <div>
             <p class="profile__text__title">ー名前ー</p>
-            <p>
-              <span class="profile__text__name">塚本 克秀</span>
-            </p>
+            <p class="profile__text">塚本 克秀</p>
             <p class="profile__text__title">ー出身地ー</p>
-            <p>兵庫県</p>
+            <p class="profile__text">兵庫県</p>
             <p class="profile__text__title">ー生年月日ー</p>
-            <p>1988年 8月 13日</p>
+            <p class="profile__text">1988年 8月 13日</p>
             <p class="profile__text__title">ー趣味ー</p>
-            <p>アクアリウム、読書、DIY</p>
+            <p class="profile__text">アクアリウム、読書、DIY</p>
           </div>
         </div>
         <p class="profile__text__title">ー自己紹介ー</p>
-        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
+        <p class="profile__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
       </div>
     </div>
     <div class="profile__content__02"></div>
@@ -32,8 +30,25 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import Scrollreveal from "scrollreveal";
+
 export default {
-  name: 'profile'
+  name: "profile",
+  computed: {
+    ...mapGetters(["fadeInConfig"]),
+  },
+  mounted() {
+    this.fadeIn();
+  },
+  methods: {
+    fadeIn() {
+      Scrollreveal().reveal(".profile__image", this.fadeInConfig(800, 0))
+      Scrollreveal().reveal(".profile__text__title", this.fadeInConfig(800, 0, "top"));
+      Scrollreveal().reveal(".profile__text", this.fadeInConfig(800, 500, "left"));
+
+    },
+  },
 };
 </script>
 
