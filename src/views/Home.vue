@@ -109,7 +109,7 @@ export default {
   z-index: 100;
 }
 .block__02 {
-  background-color: #494544;
+  background-color: #150201;
   z-index: 200;
 }
 .block__03 {

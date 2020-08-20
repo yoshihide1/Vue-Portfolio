@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     fadeIn(this: {fadeInConfig: FadeInCongig}) {
-      Scrollreveal().reveal(".nav__menu__link", this.fadeInConfig(1200, 0, "top", true, "500")
+      Scrollreveal().reveal(".nav__menu__link", this.fadeInConfig(1200, 0, "top", false, "500")
       );
     },
   },

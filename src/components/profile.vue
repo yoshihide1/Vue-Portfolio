@@ -63,11 +63,11 @@ export default {
       );
       Scrollreveal().reveal(
         ".profile__text__title",
-        this.fadeInConfig(800, 0, "top")
+        this.fadeInConfig(800, 0, "left")
       );
       Scrollreveal().reveal(
         ".profile__text",
-        this.fadeInConfig(800, 500, "left")
+        this.fadeInConfig(1000, 0, "left")
       );
     },
   },
@@ -79,19 +79,19 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #c41a30;
+  background-color: #cee2df;
   width: 2px;
   height: 100vh;
   margin-right: 50px;
 }
 .profile__line__title {
-  border-bottom: 2px solid #c41a30;
+  border-bottom: 2px solid #cee2df;
 }
 .title__profile {
-  color: #bac8c6;
+  color: #cee2df;
 }
 .profile__text__contents {
-  text-align: center;
+  padding: 0 0 1rem 1rem;
 }
 .profile__text__title {
   margin-top: 1rem;
@@ -102,7 +102,6 @@ export default {
   display: flex;
   text-align: left;
   font-size: 1.3rem;
-  /* margin-top: 0.3rem; */
 }
 .profile__text img {
   margin: 0 2rem 0 1rem;
@@ -112,6 +111,8 @@ export default {
   font-size: 2vw;
 }
 .profile__image img {
+  margin: 1rem;
+  border-radius: 50%;
   height: 40vh;
 }
 .profile__content__00 {
@@ -127,8 +128,8 @@ export default {
   margin: auto;
   height: 65vh;
   width: 60vw;
-  background-color: #bac8c6;
-  color: #494544;
+  background-color: #00213b;
+  color: #cee2df;
 }
 .profile__content__02 {
   position: absolute;
@@ -136,7 +137,7 @@ export default {
   right: 25vw;
   height: 24vh;
   width: 5vh;
-  background-color: #c41a30;
+  background-color: #cee2df;
 }
 .profile__text__pr {
   text-align: center;
@@ -148,14 +149,14 @@ export default {
   .profile__text {
     display: block;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .profile__text img {
-    margin: 1rem 0 0 0;
+    /* margin: 1rem 0 0 0; */
     height: 30vh;
   }
   .profile__text__title {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .profile__content__00 {
     position: static;
@@ -163,14 +164,18 @@ export default {
   }
   .profile__content__01 {
     position: static;
-    height: 85vh;
+    height: 90vh;
     width: 80%;
+    margin-top: 1.5rem;
   }
   .profile__content__02 {
     right: 0;
     bottom: 5vh;
     height: 5vh;
     width: 20vw;
+  }
+  .profile__text__pr {
+    font-size: 1rem;
   }
 }
 </style>

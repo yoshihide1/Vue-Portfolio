@@ -42,6 +42,7 @@ export default {
   height: 100vh;
   border-top: 2px solid #d7000f;
   background-image: url("../assets/images/main.jpg");
+  background-size: cover;
 }
 .top__name {
 font-family: 'Caveat', cursive;}
