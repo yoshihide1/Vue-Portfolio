@@ -195,5 +195,8 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
   }
+  .top__btn {
+    font-size: 2rem;
+  }
 }
 </style>
