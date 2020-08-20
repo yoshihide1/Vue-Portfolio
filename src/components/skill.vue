@@ -69,8 +69,8 @@ export default {
   },
   methods: {
     fadeIn(this: { fadeInConfig: FadeInCongig }) {
-      Scrollreveal().reveal(".skill__item", this.fadeInConfig(800, 0, "bottom", true));
-      Scrollreveal().reveal(".skill__star", this.fadeInConfig(800, 500, "left", true));
+      Scrollreveal().reveal(".skill__item", this.fadeInConfig(800, 0, "bottom"));
+      Scrollreveal().reveal(".skill__star", this.fadeInConfig(800, 500, "left"));
     },
   },
 };

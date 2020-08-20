@@ -42,15 +42,15 @@ export default {
     fadeIn(this: { fadeInConfig: FadeInCongig }) {
       Scrollreveal().reveal(
         ".profile__image",
-        this.fadeInConfig(800, 0, "bottom", true)
+        this.fadeInConfig(800, 0, "bottom")
       );
       Scrollreveal().reveal(
         ".profile__text__title",
-        this.fadeInConfig(800, 0, "left", true)
+        this.fadeInConfig(800, 0, "left")
       );
       Scrollreveal().reveal(
         ".profile__text",
-        this.fadeInConfig(1000, 500, "left", true)
+        this.fadeInConfig(1000, 500, "left")
       );
     },
   },
