@@ -85,6 +85,7 @@ export default {
 </script>
 <style>
 @import url("../assets/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Srisakdi:wght@700&display=swap');
 .block {
   height: 100vh;
   align-items: center;
@@ -100,6 +101,7 @@ export default {
   z-index: 1000;
 }
 .title {
+  font-family: 'Caveat', cursive;
   font-size: 5vw;
 }
 .block__01 {

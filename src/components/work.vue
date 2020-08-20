@@ -12,7 +12,7 @@
           <span
             class="work__text__skill"
           >Vue.js - Vuex - BootStrap - Firebase(Authentication,Cloud Firestore,Cloud Functions)</span>
-          <a href="https://master.d1yt9wvipq1at3.amplifyapp.com/">
+          <a href="https://yoshihide.netlify.app">
             <img src="../assets/images/oltower.png" alt />
           </a>
           <p class="work__item__text">

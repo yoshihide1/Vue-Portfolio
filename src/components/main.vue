@@ -4,8 +4,8 @@
     <div id="top">
       <div id="content">
         <div class="content__title">
-          <p class="fade__in__01">Yoshihide Tsukamoto</p>
-          <p class="fade__in__02">Portfolio</p>
+          <p class="fade__in__01"><span class="top__name">Yoshihide Tsukamoto</span></p>
+          <p class="fade__in__02"><span class="top__name">Portfolio</span></p>
         </div>
       </div>
     </div>
@@ -30,8 +30,8 @@ export default {
   },
   methods: {
     fadeIn(this: {fadeInConfig: FadeInCongig }) {
-      Scrollreveal().reveal(".fade__in__01", this.fadeInConfig(1000, 0, "left", true));
-      Scrollreveal().reveal(".fade__in__02", this.fadeInConfig(1000, 500, "left", true));
+      Scrollreveal().reveal(".fade__in__01", this.fadeInConfig(1300, 0, "left"));
+      Scrollreveal().reveal(".fade__in__02", this.fadeInConfig(1300, 500, "left"));
     },
   },
 };
@@ -43,6 +43,8 @@ export default {
   border-top: 2px solid #d7000f;
   background-image: url("../assets/images/main.jpg");
 }
+.top__name {
+font-family: 'Caveat', cursive;}
 .content__title {
   position: absolute;
   left: 50%;
@@ -50,7 +52,7 @@ export default {
   transform: translate(-50%, -50%);
   width: 80vw;
   color: #eaf6fd;
-  font-size: 8vw;
+  font-size: 7vw;
   opacity: 0.6;
 }
 </style>

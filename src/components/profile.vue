@@ -9,20 +9,33 @@
         <div class="profile__text">
           <div class="profile__image">
             <img src="../assets/images/me.jpg" alt />
+            <div class="profile__text__contents">
+              <p class="profile__text__title">
+                ー名前ー
+                <span class="profile__text">塚本 克秀</span>
+              </p>
+
+              <p class="profile__text__title">
+                ー出身地ー
+                <span class="profile__text">兵庫県</span>
+              </p>
+              <p class="profile__text__title">
+                ー生年月日ー
+                <span class="profile__text">1988年 8月 13日</span>
+              </p>
+              <p class="profile__text__title">
+                ー趣味ー
+                <span class="profile__text">アクアリウム、読書、DIY</span>
+              </p>
+            </div>
           </div>
           <div>
-            <p class="profile__text__title">ー名前ー</p>
-            <p class="profile__text">塚本 克秀</p>
-            <p class="profile__text__title">ー出身地ー</p>
-            <p class="profile__text">兵庫県</p>
-            <p class="profile__text__title">ー生年月日ー</p>
-            <p class="profile__text">1988年 8月 13日</p>
-            <p class="profile__text__title">ー趣味ー</p>
-            <p class="profile__text">アクアリウム、読書、DIY</p>
+            <p class="profile__text__pr">ー自己紹介ー</p>
+            <p
+              class="profile__pr"
+            >テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
           </div>
         </div>
-        <p class="profile__text__title">ー自己紹介ー</p>
-        <p class="profile__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキト</p>
       </div>
     </div>
     <div class="profile__content__02"></div>
@@ -32,22 +45,30 @@
 <script lang="ts">
 import { mapGetters } from "vuex";
 import Scrollreveal from "scrollreveal";
-import { FadeInCongig } from "../store/type"
+import { FadeInCongig } from "../store/type";
 
 export default {
   name: "profile",
   computed: {
     ...mapGetters(["fadeInConfig"]),
   },
-  mounted(this: {fadeIn: Function}) {
+  mounted(this: { fadeIn: Function }) {
     this.fadeIn();
   },
   methods: {
-    fadeIn(this: {fadeInConfig: FadeInCongig}) {
-      Scrollreveal().reveal(".profile__image", this.fadeInConfig(800, 0, "bottom"))
-      Scrollreveal().reveal(".profile__text__title", this.fadeInConfig(800, 0, "top"));
-      Scrollreveal().reveal(".profile__text", this.fadeInConfig(800, 500, "left"));
-
+    fadeIn(this: { fadeInConfig: FadeInCongig }) {
+      Scrollreveal().reveal(
+        ".profile__image",
+        this.fadeInConfig(800, 0, "bottom")
+      );
+      Scrollreveal().reveal(
+        ".profile__text__title",
+        this.fadeInConfig(800, 0, "top")
+      );
+      Scrollreveal().reveal(
+        ".profile__text",
+        this.fadeInConfig(800, 500, "left")
+      );
     },
   },
 };
@@ -69,15 +90,19 @@ export default {
 .title__profile {
   color: #bac8c6;
 }
+.profile__text__contents {
+  text-align: center;
+}
 .profile__text__title {
-  margin-top: 0.5rem;
-  font-size: 1.4vw;
+  margin-top: 1rem;
+  font-size: 1rem;
+  display: flex;
 }
 .profile__text {
   display: flex;
   text-align: left;
-  font-size: 1.6vw;
-  margin-top: 1rem;
+  font-size: 1.3rem;
+  /* margin-top: 0.3rem; */
 }
 .profile__text img {
   margin: 0 2rem 0 1rem;
@@ -112,6 +137,9 @@ export default {
   height: 24vh;
   width: 5vh;
   background-color: #c41a30;
+}
+.profile__text__pr {
+  text-align: center;
 }
 @media screen and (max-width: 769px) {
   .profile__line {
