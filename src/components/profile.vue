@@ -112,7 +112,7 @@ export default {
 }
 .profile__image img {
   margin: 1rem;
-  border-radius: 50%;
+  border-radius: 30%;
   height: 40vh;
 }
 .profile__content__00 {

@@ -30,7 +30,7 @@
             class="work__text__skill"
           >Vue.js - Vuex - Node.js - MySQL - Chart.js - AWS(Lambda,RDS,CloudWatch) - CoreUI</span>
           <a href="https://master.d1yt9wvipq1at3.amplifyapp.com/">
-            <img src="../assets/images/corona3.png" alt />
+            <img src="../assets/images/corona.png" alt />
           </a>
           <p class="work__item__text">テレビ等の報道では感染者の数ばかり取り上げられていて、現在状況がしりたくて作りました。</p>
           <p class="work__item__text">チャートを利用したり、文字を色分けすることで見やすくしました</p>
