@@ -1,16 +1,16 @@
 <template>
   <div class="main">
     <HamburgerMenu />
-    <div class="block block__01">
+    <div class="block block__top">
       <Main />
     </div>
-    <div class="block block__02">
+    <div class="block block__profile">
       <Profile />
     </div>
-    <div class="block block__03">
+    <div class="block block__skill">
       <Skill />
     </div>
-    <div class="block block__04">
+    <div class="block block__work">
       <Work />
     </div>
     <div class="block block__footer">
@@ -104,19 +104,19 @@ export default {
   font-family: 'Caveat', cursive;
   font-size: 5vw;
 }
-.block__01 {
+.block__top {
   background-color: #000;
   z-index: 100;
 }
-.block__02 {
-  background-color: #150201;
+.block__profile {
+  background-color: #002a5b;
   z-index: 200;
 }
-.block__03 {
+.block__skill {
   background-color: #150c15;
   z-index: 300;
 }
-.block__04 {
+.block__work {
   background-color: #63676b;
   z-index: 400;
 }
