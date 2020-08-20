@@ -95,13 +95,15 @@ export default {
 }
 .profile__text__title {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   display: flex;
 }
 .profile__text {
   display: flex;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  
 }
 .profile__text img {
   margin: 0 2rem 0 1rem;
@@ -123,7 +125,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 10vh;
+  bottom: 5vh;
   left: 0;
   margin: auto;
   height: 65vh;
@@ -152,7 +154,6 @@ export default {
     font-size: 1.2rem;
   }
   .profile__text img {
-    /* margin: 1rem 0 0 0; */
     height: 30vh;
   }
   .profile__text__title {
