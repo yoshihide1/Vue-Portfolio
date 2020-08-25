@@ -29,7 +29,7 @@
           <span
             class="work__text__skill"
           >Vue.js - Vuex - Node.js - MySQL - Chart.js - AWS(Lambda,RDS,CloudWatch) - CoreUI</span>
-          <a href="https://master.d1yt9wvipq1at3.amplifyapp.com/">
+          <a href="https://www.yoshihide.site/">
             <img src="../assets/images/corona.png" alt />
           </a>
           <p class="work__item__text">テレビ等の報道では感染者の数ばかり取り上げられていて、現在状況がしりたくて作りました。</p>
