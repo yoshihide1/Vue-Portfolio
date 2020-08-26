@@ -18,7 +18,15 @@
       </div>
       <div>
         <p class="profile__text__title">ー自己紹介ー</p>
-        <p class="profile__pr">あああああああああああああああああああああああああああああああああああああああああああ</p>
+        <p class="profile__pr">
+          精密な作業や集中力を要する仕事が好きで、前職まで１０年間製造業に従事しておりました。
+          業務では業務効率を考えたりより良い仕事にする方法を考えたりしていました。
+        </p>
+        <p class="profile__pr">また子供の頃から作ることに関心があり、インターネットやホームページの仕組みなどを調べたりしていました。</p>
+        <p class="profile__pr">３０代になりこれからの働き方を考えたとき、自分の性格や興味をより活かせる分野に進みたいと考えて、働きながら勉強を続けていました。</p>
+        <p
+          class="profile__pr"
+        >実際の業務には携わっていませんが、プログラミングの基礎から学びAPIやツールを使って自分なりのアプリやサービスを作るところまでやってみました。</p>
       </div>
     </div>
     <div class="profile__content__bar"></div>
@@ -150,13 +158,18 @@ export default {
     margin-top: 1.5rem;
   }
   .profile__content__bar {
-    right: 0;
+    display: none;
+    /* right: 0;
     bottom: 5vh;
     height: 5vh;
-    width: 20vw;
+    width: 20vw; */
   }
   .profile__text__pr {
     font-size: 1rem;
+  }
+  .profile__pr {
+    font-size: 0.7rem;
+    text-align: left;
   }
 }
 </style>
